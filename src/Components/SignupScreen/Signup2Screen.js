@@ -1,10 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, TextInput, TouchableOpacity, CheckBox } from "react-native"
+import { View, Text, StyleSheet, Dimensions, TextInput, TouchableOpacity, CheckBox, ImageBackground } from "react-native"
 const { width, height } = Dimensions.get('window')
+import BG from '../../images/bg.png'
 function Signup2Screen({navigation}) {
   return (
+    <ImageBackground source={BG}>
     <View style={styles.main}>
-
     <Text style={styles.heading} >Home Care</Text>
           <View style={styles.form}  >
     
@@ -57,11 +58,12 @@ function Signup2Screen({navigation}) {
     
             </View>
             <View style={styles.checkBoxDiv} >
-              <Text  
+              <Text
+              style={{color:"#000"}}  
               >
               If you already Register
                <Text style={{ color: "#FF66C3", fontWeight: 500 }}
-                //   onPress={()=> navigation.navigate('signin')}
+                  onPress={()=> navigation.navigate('login')}
                >
               login 
               </Text>
@@ -81,6 +83,7 @@ function Signup2Screen({navigation}) {
     
     
         </View>
+        </ImageBackground>
   )
 }
 
@@ -89,11 +92,11 @@ const styles = StyleSheet.create({
 
 
     main: {
-        width: "100%",
-        height: height * 1.1,
-        backgroundColor: "pink",
-        display: "flex",
-        alignItems: "center"
+      width: "100%",
+      height: height * 1.1,
+      // backgroundColor: "pink",
+      display: "flex",
+      alignItems: "center",
     
       },
       heading:{
@@ -165,12 +168,12 @@ const styles = StyleSheet.create({
       },
       inp: {
         width: width * 0.7,
-        borderBottomWidth: 0.2,
-        borderColor: "black",
+        borderBottomWidth: 1,
+        borderColor: "#000",
         marginLeft: width * 0.08,
         marginTop: 5,
         fontSize:19,
-        color:"#BFBBBB",
+        color:"#36454F",
         fontWeight:"400"
     
       },

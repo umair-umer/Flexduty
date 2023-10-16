@@ -8,11 +8,9 @@ import ForgetScreen from './src/Components/ForgetScreen';
 import SendcodeScreen from './src/Components/SendcodeScreen';
 import Conformpassword from './src/Components/ConformPassword';
 import Signup2Screen from './src/Components/SignupScreen/Signup2Screen';
-
-
-
-
-
+import PostshiftScreen from './src/Components/hospitalSideComponents';
+import ShifPostScreen from './src/Components/hospitalSideComponents/ShiftPostScreen';
+import JobfromScreen from './src/Components/hospitalSideComponents/Postjobfromscreen';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -33,6 +31,12 @@ export default function App() {
         <Stack.Screen name="sendcode" component={SendcodeScreen} />
         <Stack.Screen name="forget" component={ForgetScreen} />
         <Stack.Screen name="confrmpass" component={Conformpassword} />
+        <Stack.Screen name="hospitalhome" component={PostshiftScreen} />
+        <Stack.Screen name="post" component={ShifPostScreen} />
+        <Stack.Screen name="postshifts" component={JobfromScreen} />
+       
+
+       
         
       </Stack.Navigator>
     </NavigationContainer>
