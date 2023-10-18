@@ -38,11 +38,13 @@ function ShifPostScreen({navigation}) {
         <TouchableOpacity style={styles.btn1}
         onPress={()=>navigation.navigate('hospitalhome')}
         >
-            <FontAwesome5 name="redo" size={20}/>
-            <Text style={styles.text3}>Start over</Text>
+            
+            <Text style={styles.text3}>
+            <FontAwesome5 name="redo" size={13} style={{fontWeight:"700"}}/>
+              Start over</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btn2}
-        onPress={()=>navigation.navigate('post Panel')}
+        onPress={()=>navigation.navigate('post')}
         >
             <Text style={styles.text4}>Post Shift</Text>
         </TouchableOpacity>
@@ -148,7 +150,7 @@ btn1:{
 btn2:{
 
     width: width * 0.8,
-    height : height * 0.04,
+    height : height * 0.05,
     backgroundColor: "#FF66C3",
     borderRadius: 5
 },

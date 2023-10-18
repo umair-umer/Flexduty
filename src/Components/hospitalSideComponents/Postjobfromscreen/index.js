@@ -110,13 +110,14 @@ const styles = StyleSheet.create({
     
          width: "100%",
          backgroundColor: "#fff",
+         paddingHorizontal:width*0.03
          
     },
     heading:{
         fontSize: 16,
         color: "#FF66C3",
         fontWeight: "500",
-        marginRight: width * 0.8,
+      //   marginRight: width * 0.8,
     
       },
     inp:{
@@ -145,13 +146,14 @@ const styles = StyleSheet.create({
     btn2:{
 
         width: width * 0.9,
-        height : height * 0.04,
+        height : height * 0.05,
         backgroundColor: "#FF66C3",
         borderRadius: 5
     },
     btn:{
 
         padding: height * 0.03,
+        alignItems:"center"
     },
     
     })

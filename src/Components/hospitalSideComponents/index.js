@@ -3,6 +3,8 @@ import {Text,Dimensions,View,StyleSheet,TouchableOpacity} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Feather from 'react-native-vector-icons/Feather'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+// This is main page of hospital side 
 
 const {width,height}=Dimensions.get("window");
 function PostshiftScreen({navigation}) {
@@ -47,7 +49,7 @@ function PostshiftScreen({navigation}) {
     <TouchableOpacity style={styles.btn1}
     onPress={()=>navigation.navigate('shifts')}
     >
-        <Text style={styles.text1}>Start over</Text>
+        <Text style={styles.text1}>  <FontAwesome5 name="redo" size={13} style={{fontWeight:"700"}}/>Start over</Text>
     </TouchableOpacity>
     <TouchableOpacity style={styles.btn2}
     onPress={()=>navigation.navigate('postshifts')}
@@ -61,14 +63,12 @@ function PostshiftScreen({navigation}) {
     <View style={styles.tabsIcons}>
     <TouchableOpacity>
     <AntDesign name="home" size={20} color="#FF66C3" style={styles.tabsIcons} />
-        <Text style={styles.tabText}>Home</Text>
+        <Text style={styles.tabText} onPress={()=>navigation.navigate("hospitalhome")}>Home</Text>
     </TouchableOpacity>
     <TouchableOpacity>
     <MaterialIcons name="shopping-bag" size={20} color="#FF66C3" style={styles.tabsIcons} />
-        <View style={styles.tabText}
-         onPress={()=>navigation.navigate('ApplicantShift')}
-        >
-        <Text style={styles.tabText}>
+        <View style={styles.tabText}>
+        <Text style={styles.tabText}   onPress={()=>navigation.navigate('usershifts')} >
         Shift
        </Text>
         
@@ -78,7 +78,7 @@ function PostshiftScreen({navigation}) {
     <TouchableOpacity>
     <Feather name="folder" size={20} color="#FF66C3" style={styles.tabsIcons1} />
         <Text style={styles.tabText}
-        
+        onPress={()=>navigation.navigate("timesheet")}
         >TimeSheet</Text>
     </TouchableOpacity>
     <TouchableOpacity>
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     btn2:{
     
         width: width * 0.8,
-        height : height * 0.04,
+        height : height * 0.045,
         backgroundColor: "#FF66C3",
         borderRadius: 5
     },

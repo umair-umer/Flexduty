@@ -11,6 +11,12 @@ import Signup2Screen from './src/Components/SignupScreen/Signup2Screen';
 import PostshiftScreen from './src/Components/hospitalSideComponents';
 import ShifPostScreen from './src/Components/hospitalSideComponents/ShiftPostScreen';
 import JobfromScreen from './src/Components/hospitalSideComponents/Postjobfromscreen';
+import Applicationshifts from './src/Components/hospitalSideComponents/ApplicationShifts';
+import TimeSheetscreen from './src/Components/hospitalSideComponents/Timesheets';
+
+
+
+
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -34,7 +40,8 @@ export default function App() {
         <Stack.Screen name="hospitalhome" component={PostshiftScreen} />
         <Stack.Screen name="post" component={ShifPostScreen} />
         <Stack.Screen name="postshifts" component={JobfromScreen} />
-       
+        <Stack.Screen name="usershifts" component={Applicationshifts} />
+        <Stack.Screen name="timesheet" component={TimeSheetscreen} />
 
        
         
